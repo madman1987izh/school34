@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание уроков</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Расписание уроков для параллели {{ parallel }} классов</h1>
+    <nav>
+        <a href="{{ url_for('get_schedule', parallel='1') }}">1 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='2') }}">2 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='3') }}">3 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='4') }}">4 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='5') }}">5 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='6') }}">6 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='7') }}">7 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='8') }}">8 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='9') }}">9 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='10') }}">10 классы</a> |
+        <a href="{{ url_for('get_schedule', parallel='11') }}">11 классы</a>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>День недели</th>
+                {% for class in schedule.keys() %}
+                    <th>Класс {{ class }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for day in days %}
+                <tr >
+                    <td >{{ day }}</td>
+                    {% for class, lessons in schedule.items() %}
+                        <td>
+                            <table>
+                                {% for bell in bell_schedule %}
+                                    {% set lesson = lessons | selectattr('lesson_number', 'equalto', bell.lesson_number) | selectattr('day', 'equalto', day) | list %}
+                                    <tr>
+                                        <td>№ {{ bell.lesson_number }}</td>
+                                        <td>
+                                            {% if lesson %}
+                                                {{ lesson[0].subject }}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

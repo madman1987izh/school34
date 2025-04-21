@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание уроков</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Расписание уроков</h1>
+    <table >
+        <thead>
+            <tr>
+                <th>День недели</th>
+                {% for class in schedule.keys() %}
+                    <th>Класс {{ class }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for day in days %}
+                <tr>
+                    <td>{{ day }}</td>
+                    {% for class, lessons in schedule.items() %}
+                        <td>
+                            <table  class="table_block">
+                                {% for bell in bell_schedule %}
+                                    {% set lesson = lessons | selectattr('lesson_number', 'equalto', bell.lesson_number) | selectattr('day', 'equalto', day) | list %}
+                                    <tr>
+                                        <td>Урок {{ bell.lesson_number }}</td>
+                                        <td>
+                                            {% if lesson %}
+                                                {{ lesson[0].subject }}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление расписанием</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Управление расписанием</h1>
+    <h2>Создать новый класс</h2>
+    <form action="/add_class" method="post">
+        <label for="class_name">Название класса:</label>
+        <input type="text" id="class_name" name="class_name" required>
+        <button type="submit">Создать</button>
+    </form>
+    <h2>Добавить расписание для класса</h2>
+    <form action="/add_schedule" method="post">
+        <label for="class_name">Класс:</label>
+        <select id="class_name" name="class_name">
+            {% for class in schedule.keys() %}
+                <option value="{{ class }}">{{ class }}</option>
+            {% endfor %}
+        </select>
+        <label for="day">День недели:</label>
+        <select id="day" name="day">
+            {% for day in days_of_week %}
+                <option value="{{ day }}">{{ day }}</option>
+            {% endfor %}
+        </select>
+        <label for="subjects">Уроки (разделенные новой строкой):</label>
+        <textarea id="subjects" name="subjects" rows="8" required></textarea>
+        <button type="submit">Добавить</button>
+    </form>
+    <h2>Изменить расписание для класса</h2>
+    <form action="/edit_schedule" method="post">
+        <label for="class_name">Класс:</label>
+        <select id="class_name" name="class_name">
+            {% for class in schedule.keys() %}
+                <option value="{{ class }}">{{ class }}</option>
+            {% endfor %}
+        </select>
+        <label for="lesson_index">Номер урока:</label>
+        <input type="number" id="lesson_index" name="lesson_index" required>
+        <label for="day">День недели:</label>
+        <select id="day" name="day">
+            {% for day in days_of_week %}
+                <option value="{{ day }}">{{ day }}</option>
+            {% endfor %}
+        </select>
+        <label for="subject">Предмет:</label>
+        <input type="text" id="subject" name="subject" required>
+        <label for="lesson_number">Номер урока:</label>
+        <input type="number" id="lesson_number" name="lesson_number" required>
+        <button type="submit">Изменить</button>
+    </form>
+</body>
+</html>
