@@ -2,56 +2,535 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Управление расписанием</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .changed-lesson {
+            background-color: #fff3f3;
+            animation: pulse 2s infinite;
+        }
+        .change-badge {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        @keyframes pulse {
+            0% { background-color: #fff3f3; }
+            50% { background-color: #ffecec; }
+            100% { background-color: #fff3f3; }
+        }
+        .table-responsive {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .lesson-item {
+            padding: 8px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        #no-results {
+            display: none;
+        }
+        .qr-code-img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Управление расписанием</h1>
-    <h2>Создать новый класс</h2>
-    <form action="/add_class" method="post">
-        <label for="class_name">Название класса:</label>
-        <input type="text" id="class_name" name="class_name" required>
-        <button type="submit">Создать</button>
-    </form>
-    <h2>Добавить расписание для класса</h2>
-    <form action="/add_schedule" method="post">
-        <label for="class_name">Класс:</label>
-        <select id="class_name" name="class_name">
-            {% for class in schedule.keys() %}
-                <option value="{{ class }}">{{ class }}</option>
-            {% endfor %}
-        </select>
-        <label for="day">День недели:</label>
-        <select id="day" name="day">
-            {% for day in days_of_week %}
-                <option value="{{ day }}">{{ day }}</option>
-            {% endfor %}
-        </select>
-        <label for="subjects">Уроки (разделенные новой строкой):</label>
-        <textarea id="subjects" name="subjects" rows="8" required></textarea>
-        <button type="submit">Добавить</button>
-    </form>
-    <h2>Изменить расписание для класса</h2>
-    <form action="/edit_schedule" method="post">
-        <label for="class_name">Класс:</label>
-        <select id="class_name" name="class_name">
-            {% for class in schedule.keys() %}
-                <option value="{{ class }}">{{ class }}</option>
-            {% endfor %}
-        </select>
-        <label for="lesson_index">Номер урока:</label>
-        <input type="number" id="lesson_index" name="lesson_index" required>
-        <label for="day">День недели:</label>
-        <select id="day" name="day">
-            {% for day in days_of_week %}
-                <option value="{{ day }}">{{ day }}</option>
-            {% endfor %}
-        </select>
-        <label for="subject">Предмет:</label>
-        <input type="text" id="subject" name="subject" required>
-        <label for="lesson_number">Номер урока:</label>
-        <input type="number" id="lesson_number" name="lesson_number" required>
-        <button type="submit">Изменить</button>
-    </form>
+    <div class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="mb-0"><i class="bi bi-calendar-week"></i> Управление расписанием</h1>
+            <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> На главную
+            </a>
+        </div>
+
+        {% if message %}
+        <div class="alert {% if error %}alert-danger{% elif success %}alert-success{% elif warning %}alert-warning{% else %}alert-info{% endif %} alert-dismissible fade show">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endif %}
+
+        {% if schedule is undefined or not schedule %}
+        <div class="alert alert-warning">
+            Расписание не загружено или пустое
+        </div>
+        {% else %}
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-light">
+                <h2 class="h5 mb-0"><i class="bi bi-funnel"></i> Фильтр расписания</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="class-filter" class="form-label">Выберите класс</label>
+                        <select class="form-select" id="class-filter">
+                            <option value="">Все классы</option>
+                            {% for class_name in schedule.keys()|sort %}
+                            <option value="{{ class_name }}">{{ class_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="day-filter" class="form-label">Выберите день</label>
+                        <select class="form-select" id="day-filter">
+                            <option value="">Все дни</option>
+                            {% for day in days_of_week %}
+                            <option value="{{ day }}">{{ day }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs mb-4" id="manageTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="edit-tab" data-bs-toggle="tab" data-bs-target="#edit-panel" type="button">
+                    <i class="bi bi-pencil"></i> Редактирование
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="add-class-tab" data-bs-toggle="tab" data-bs-target="#add-class-panel" type="button">
+                    <i class="bi bi-plus-circle"></i> Добавить класс
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="upload-tab" data-bs-toggle="tab" data-bs-target="#upload-panel" type="button">
+                    <i class="bi bi-upload"></i> Массовая загрузка
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="qr-tab" data-bs-toggle="tab" data-bs-target="#qr-panel" type="button">
+                    <i class="bi bi-qr-code"></i> QR-коды
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="manageTabsContent">
+            <!-- Панель редактирования расписания -->
+            <div class="tab-pane fade show active" id="edit-panel" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h5 mb-0"><i class="bi bi-pencil-square"></i> Редактировать урок</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('edit_schedule') }}" method="post" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="edit-class" class="form-label">Класс</label>
+                                    <select class="form-select" id="edit-class" name="class_name" required>
+                                        <option value="" selected disabled>Выберите класс</option>
+                                        {% for class in schedule.keys()|sort %}
+                                        <option value="{{ class }}">{{ class }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="edit-day" class="form-label">День недели</label>
+                                    <select class="form-select" id="edit-day" name="day" required>
+                                        <option value="" selected disabled>Выберите день</option>
+                                        {% for day in days_of_week %}
+                                        <option value="{{ day }}">{{ day }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="edit-lesson" class="form-label">Номер урока</label>
+                                    <select class="form-select" id="edit-lesson" name="lesson_number" required>
+                                        <option value="" selected disabled>Выберите урок</option>
+                                        {% for bell in bell_schedule %}
+                                        <option value="{{ bell.lesson_number }}"
+                                                data-start="{{ bell.start_time }}"
+                                                data-end="{{ bell.end_time }}">
+                                            Урок {{ bell.lesson_number }} ({{ bell.start_time }}-{{ bell.end_time }})
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                    <small id="time-hint" class="form-text text-muted"></small>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="edit-subject" class="form-label">Название предмета</label>
+                                    <input type="text" class="form-control" id="edit-subject" name="subject"
+                                           placeholder="Введите название предмета" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-save"></i> Сохранить изменения
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Просмотр текущего расписания -->
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="h5 mb-0"><i class="bi bi-eye"></i> Текущее расписание</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover" id="schedule-table">
+                                <thead>
+                                    <tr>
+                                        <th>Класс</th>
+                                        <th>День</th>
+                                        <th>Урок</th>
+                                        <th>Предмет</th>
+                                        <th>Действия</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for class_name, lessons in schedule.items() %}
+                                        {% for lesson in lessons %}
+                                        <tr class="schedule-row"
+                                            data-class="{{ class_name }}"
+                                            data-day="{{ lesson.day }}">
+                                            <td>{{ class_name }}</td>
+                                            <td>{{ lesson.day }}</td>
+                                            <td>{{ lesson.lesson_number }}</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    {{ lesson.subject }}
+                                                    {% for change in changes.get(class_name, []) %}
+                                                        {% if change.day == lesson.day and change.lesson_number == lesson.lesson_number %}
+                                                        <span class="change-badge ms-2">изм.</span>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary edit-btn"
+                                                        data-class="{{ class_name }}"
+                                                        data-day="{{ lesson.day }}"
+                                                        data-lesson="{{ lesson.lesson_number }}"
+                                                        data-subject="{{ lesson.subject }}">
+                                                    <i class="bi bi-pencil"></i> Быстрое редактирование
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <div id="no-results" class="text-center text-muted py-3">
+                                Нет результатов, соответствующих выбранным фильтрам
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Панель добавления класса -->
+            <div class="tab-pane fade" id="add-class-panel" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="h5 mb-0"><i class="bi bi-plus-circle"></i> Добавить новый класс</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('add_class') }}" method="post" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="new-class" class="form-label">Название класса</label>
+                                <input type="text" class="form-control" id="new-class" name="class_name"
+                                       placeholder="Например: 5А" pattern="[0-9]{1,2}[А-Яа-я]" required>
+                                <div class="invalid-feedback">
+                                    Введите корректное название класса (например: 7Б или 10А)
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">
+                                <i class="bi bi-plus-circle"></i> Добавить класс
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Панель массовой загрузки -->
+            <div class="tab-pane fade" id="upload-panel" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h2 class="h5 mb-0"><i class="bi bi-upload"></i> Массовая загрузка расписания</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle"></i> Загрузите текстовый файл с расписанием
+                        </div>
+                        <a href="{{ url_for('upload') }}" class="btn btn-warning">
+                            <i class="bi bi-upload"></i> Перейти к загрузке файла
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Панель QR-кодов -->
+            <div class="tab-pane fade" id="qr-panel" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h2 class="h5 mb-0"><i class="bi bi-qr-code"></i> Генерация QR-кодов</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            QR-коды содержат прямые ссылки на расписание каждого класса
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Класс</th>
+                                        <th>QR-код</th>
+                                        <th>Ссылка</th>
+                                        <th>Действия</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for class_name in schedule.keys()|sort %}
+                                    <tr>
+                                        <td>{{ class_name }}</td>
+                                        <td>
+                                            <img src="{{ url_for('generate_qr', class_name=class_name) }}"
+                                                 alt="QR-код для {{ class_name }}" class="qr-code-img">
+                                        </td>
+                                        <td>
+                                            <small>{{ url_for('class_schedule', class_name=class_name, _external=True) }}</small>
+                                        </td>
+                                        <td>
+                                            <a href="{{ url_for('generate_qr', class_name=class_name) }}"
+                                               class="btn btn-sm btn-outline-primary" download="{{ class_name }}_qr.png">
+                                                <i class="bi bi-download"></i> Скачать
+                                            </a>
+                                            <a href="{{ url_for('class_schedule', class_name=class_name) }}"
+                                               target="_blank" class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-eye"></i> Просмотр
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="{{ url_for('generate_all_qr') }}" class="btn btn-primary">
+                                <i class="bi bi-qr-code-scan"></i> Сгенерировать все QR-коды
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if changes %}
+        <div class="card shadow-sm mt-4">
+            <div class="card-header bg-secondary text-white">
+                <h2 class="h5 mb-0"><i class="bi bi-clock-history"></i> Активные изменения</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Класс</th>
+                                <th>День</th>
+                                <th>Урок</th>
+                                <th>Было</th>
+                                <th>Стало</th>
+                                <th>Когда</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for class_name, class_changes in changes.items() %}
+                                {% for change in class_changes %}
+                                <tr>
+                                    <td>{{ class_name }}</td>
+                                    <td>{{ change.day }}</td>
+                                    <td>{{ change.lesson_number }}</td>
+                                    <td>{{ change.old_subject }}</td>
+                                    <td>{{ change.new_subject }}</td>
+                                    <td>{{ change.changed_at }}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-danger revert-btn"
+                                                data-class="{{ class_name }}"
+                                                data-day="{{ change.day }}"
+                                                data-lesson="{{ change.lesson_number }}">
+                                            <i class="bi bi-arrow-counterclockwise"></i> Отменить
+                                        </button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Фильтрация расписания
+        document.addEventListener('DOMContentLoaded', function() {
+            const classFilter = document.getElementById('class-filter');
+            const dayFilter = document.getElementById('day-filter');
+            const scheduleRows = document.querySelectorAll('.schedule-row');
+            const noResults = document.getElementById('no-results');
+
+            function applyFilters() {
+                const selectedClass = classFilter.value;
+                const selectedDay = dayFilter.value;
+                let visibleRows = 0;
+
+                scheduleRows.forEach(row => {
+                    const rowClass = row.dataset.class;
+                    const rowDay = row.dataset.day;
+
+                    const classMatch = !selectedClass || rowClass === selectedClass;
+                    const dayMatch = !selectedDay || rowDay === selectedDay;
+
+                    if (classMatch && dayMatch) {
+                        row.style.display = '';
+                        visibleRows++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                noResults.style.display = visibleRows === 0 ? '' : 'none';
+            }
+
+            classFilter.addEventListener('change', applyFilters);
+            dayFilter.addEventListener('change', applyFilters);
+            applyFilters();
+
+            // Быстрое заполнение формы редактирования
+            document.querySelectorAll('.edit-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.getElementById('edit-class').value = this.dataset.class;
+                    document.getElementById('edit-day').value = this.dataset.day;
+                    document.getElementById('edit-lesson').value = this.dataset.lesson;
+                    document.getElementById('edit-subject').value = this.dataset.subject;
+
+                    // Активируем вкладку редактирования
+                    const editTab = new bootstrap.Tab(document.getElementById('edit-tab'));
+                    editTab.show();
+
+                    // Прокрутка и фокус
+                    document.getElementById('edit-subject').scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('edit-subject').focus();
+                });
+            });
+
+            // Отображение времени урока
+            document.getElementById('edit-lesson').addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                document.getElementById('time-hint').textContent =
+                    `Время урока: ${selectedOption.dataset.start}-${selectedOption.dataset.end}`;
+            });
+
+            // Отмена изменений
+            document.querySelectorAll('.revert-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const class_name = this.dataset.class;
+                    const day = this.dataset.day;
+                    const lesson = this.dataset.lesson;
+
+                    // Блокируем кнопку на время выполнения
+                    const originalHtml = this.innerHTML;
+                    this.disabled = true;
+                    this.innerHTML = '<span class="spinner-border spinner-border-sm" role="status"></span> Отмена...';
+
+                    try {
+                        const response = await fetch('/revert_change', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                class_name: class_name,
+                                day: day,
+                                lesson_number: lesson
+                            })
+                        });
+
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Удаляем строку из таблицы изменений
+                            this.closest('tr').remove();
+
+                            // Обновляем статус в таблице расписания
+                            document.querySelectorAll(`tr td:nth-child(4)`).forEach(td => {
+                                if (td.textContent.includes(class_name + ' - ' + day + ', урок ' + lesson)) {
+                                    const badge = td.querySelector('.change-badge');
+                                    if (badge) badge.remove();
+                                }
+                            });
+
+                            // Показываем уведомление
+                            showAlert('Изменение успешно отменено', 'success');
+                        } else {
+                            showAlert(result.message || 'Ошибка при отмене изменения', 'danger');
+                            this.disabled = false;
+                            this.innerHTML = originalHtml;
+                        }
+                    } catch (error) {
+                        showAlert('Ошибка сети: ' + error.message, 'danger');
+                        this.disabled = false;
+                        this.innerHTML = originalHtml;
+                    }
+                });
+            });
+
+            // Функция для показа уведомлений
+            function showAlert(message, type) {
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
+                alertDiv.innerHTML = `
+                    <i class="bi ${type === 'success' ? 'bi-check-circle' : 'bi-exclamation-triangle'}"></i>
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+
+                const container = document.querySelector('.container.py-4');
+                container.prepend(alertDiv);
+
+                // Автоматическое скрытие через 5 секунд
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alertDiv);
+                    bsAlert.close();
+                }, 5000);
+            }
+
+            // Валидация форм
+            (() => {
+                'use strict'
+                const forms = document.querySelectorAll('.needs-validation')
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        });
+    </script>
 </body>
 </html>

@@ -1,101 +1,53 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --accent-color: #e74c3c;
+  --light-bg: #f8f9fa;
+  --dark-text: #2c3e50;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-    font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
 }
 
-h1, h2 {
-    color: #4CAF50;
-    text-align: center;
-
+.navbar {
+  background-color: var(--primary-color);
 }
 
-form {
-    margin-bottom: 20px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, select, button, textarea {
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-table {
- margin: auto;
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2px;
+@media (max-width: 768px) {
+  .table-responsive {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    border-radius: 5px;
+  .lesson-item {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+/* Стили для таблицы расписания */
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
 }
 
-th, td {
-    border: 1px solid #ccc;
-    padding: 5px;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 10px;
+/* Подсветка строки при наведении */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
 }
 
-th {
-    background-color: #e0f7fa;
+/* Фиксированная ширина для колонки действий */
+.table td:last-child {
+    width: 180px;
 }
 
-td {
-    background-color: #f2f2f2;
-
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #45a049;
-}
-.day
-{
-transform: rotate(-90deg);
-background-color: #e0f7fa;
+/* Анимация переключения табов */
+.tab-pane.fade.show {
+    transition: opacity 0.3s ease;
 }

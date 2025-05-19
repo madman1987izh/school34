@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка расписания</title>
+</head>
+<body>
+    <h1>Загрузка расписания</h1>
+    <form action="{{ url_for('upload_schedule') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="schedule_file" accept=".txt">
+        <button type="submit">Загрузить расписание</button>
+    </form>
+</body>
+</html>

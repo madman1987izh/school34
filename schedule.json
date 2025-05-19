@@ -1,44 +1,1385 @@
 {
-    "11А": [
+    "5А": [
         {
             "day": "Понедельник",
-            "subject": "Физика 202",
+            "subject": "Разговоры о важном 300",
             "lesson_number": 1
         },
         {
             "day": "Понедельник",
-            "subject": "Физика 202",
+            "subject": "Русский язык 317",
             "lesson_number": 2
         },
         {
             "day": "Понедельник",
-            "subject": "Разговоры о важном  308",
+            "subject": "ИЗО 316",
             "lesson_number": 3
         },
         {
             "day": "Понедельник",
-            "subject": "Алгебра 323",
+            "subject": "Англ. язык 218/314",
             "lesson_number": 4
         },
         {
             "day": "Понедельник",
-            "subject": "История 312",
+            "subject": "Математика 323",
             "lesson_number": 5
         },
         {
             "day": "Понедельник",
-            "subject": "Семьеведение 303",
+            "subject": "Физкультура",
             "lesson_number": 6
         },
         {
+            "day": "Вторник",
+            "subject": "Русский язык 317",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Литература 317",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "История 312",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Музыка 207",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "ОднкР 303",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "География 316",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 317",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 323кап",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Англ. язык 218/314",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Труд 104/105",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Труд 104/105",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 323",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 317",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Литература 317",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 303",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 312",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Русский язык 317",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 218/314",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 323",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят.320",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 320",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия - мои горизонты 320",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Математика ДО",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 6
+        }
+    ],
+    "5Б": [
+        {
             "day": "Понедельник",
-            "subject": "Русский язык 308",
-            "lesson_number": 7
+            "subject": "Разговоры о важном 314",
+            "lesson_number": 1
         },
         {
             "day": "Понедельник",
-            "subject": "Русский язык 308",
-            "lesson_number": 8
+            "subject": "Англ. язык 305/314",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "ОднкР 303",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 317",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Труд 104/105",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Труд 104/105",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Музыка 207",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "История 312",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 317",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Литература 317",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 323",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "ИЗО 321",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Англ. язык 305/314",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 317",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "География 316",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Немецкий 313/314",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 323",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 303",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 317",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Литература 317",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 312",
+            "lesson_number": 6
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 305/314",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 323",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 323",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Немецкий 313/314",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Классный час 314",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят. 314",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия – мои  горизонты 314",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Математика ДО",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 6
+        }
+    ],
+    "5В": [
+        {
+            "day": "Понедельник",
+            "subject": "Разговоры о важном 212",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "История 312",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Математика 212",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 309",
+            "lesson_number": 5
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Литература 309",
+            "lesson_number": 6
+        },
+        {
+            "day": "Вторник",
+            "subject": "Музыка 207",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 306/314",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Труд 104/105",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Труд 104/105",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 212",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 309",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 212",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 309",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Литература 309",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "ОднкР 303",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Англ. язык 301/314",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 301/314",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 312",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 309",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 212",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 303",
+            "lesson_number": 6
+        },
+        {
+            "day": "Пятница",
+            "subject": "ИЗО 315",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "География 205",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 212",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 212",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия – мои  горизонты 212",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят. 212",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 6
+        }
+    ],
+    "5Г": [
+        {
+            "day": "Понедельник",
+            "subject": "-",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "-",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 317",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "География 3 4",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Математика 212",
+            "lesson_number": 5
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Англ. язык 3 5/314",
+            "lesson_number": 6
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 212",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Музыка 2 7",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 317",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Биология 214",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "История 312",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 3 5/314",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "ИЗО 321",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 317",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Литература 317",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 212",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Англ. язык 3 5/314",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 317",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 212",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 312",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд 1 4/1 5",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд 1 4/1 5",
+            "lesson_number": 6
+        },
+        {
+            "day": "Пятница",
+            "subject": "Русский язык 317",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Литература 317",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Физкультура",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 212",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 3 5",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят. 3 5",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия – мои  горизонты 3 5",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 5
+        }
+    ],
+    "5Д": [
+        {
+            "day": "Понедельник",
+            "subject": "Разговоры о важном 313",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "ОднкР 303",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Математика 324",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 318",
+            "lesson_number": 5
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Англ. язык 301/313",
+            "lesson_number": 6
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 324",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Биология 214",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 318",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Литература 318",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Музыка 207",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 301/313",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "-",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 318",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "История 312",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 324",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд 104/105",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд 104/105",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 324",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 318",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Литература 318",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 312",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "ИЗО 315",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 324",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 301/216",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "География 304",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 313",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия – мои  горизонты  313",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят. 313",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 6
+        }
+    ],
+    "5Е": [
+        {
+            "day": "Понедельник",
+            "subject": "Разговоры о важном 318",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "История 106",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 318",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "История 106",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 212",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 306/307",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 212",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 318",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Биология 214",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "Музыка 207",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "ИЗО 321",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "География 315",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Литература 318",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 212",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "-",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "ОднкР 318",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 318",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 212",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 301/307",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Труд 104/105",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Труд 104/105",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 301/307",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 212",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Русский язык 318",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 318",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия - мои горизонты 318",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят.318",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 6
+        }
+    ],
+    "5И": [
+        {
+            "day": "Понедельник",
+            "subject": "Разговоры о важном 106",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Англ. язык 301/313",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Математика 324",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 310",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "ИЗО 318",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "ОднкР 318",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 324",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 310",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Литература 310",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Физкультура",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "История 106",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 324",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "География 316",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Англ. язык 301/313",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 310",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 324",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд 104/105",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд 104/105",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 303",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 301/313",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 324",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 106",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Русский язык 310",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Литература 310",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Музыка 207",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят. 106",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия – мои  горизонты 106",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 106",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 6
+        }
+    ],
+    "5К": [
+        {
+            "day": "Понедельник",
+            "subject": "Разговоры о важном 315",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "ИЗО 315",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Математика 321",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык 32",
+            "lesson_number": 5
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Русский язык32",
+            "lesson_number": 6
+        },
+        {
+            "day": "Вторник",
+            "subject": "География 3 3",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 32",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 321",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 216/3 5",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Литература 32",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Труд 1 4/1 5",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Труд 1 4/1 5",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Физкультура",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 32",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "ОднкР 2 3",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 321",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Музыка 2 7",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 3 3",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 321",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 315",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 32",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 3 1/3 5",
+            "lesson_number": 6
+        },
+        {
+            "day": "Пятница",
+            "subject": "Литература 32",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Математика 321",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 3 1/3 5",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 315",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Классный час 315",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят.315",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Россия – мои  горизонты 315",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Час психолога",
+            "lesson_number": 5
+        }
+    ],
+    "5М": [
+        {
+            "day": "Понедельник",
+            "subject": "Разговоры о важном Акт.зал",
+            "lesson_number": 1
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Математика 212",
+            "lesson_number": 2
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Англ. язык 3 1/3 7",
+            "lesson_number": 3
+        },
+        {
+            "day": "Понедельник",
+            "subject": "История 1 6",
+            "lesson_number": 4
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Музыка 2 7",
+            "lesson_number": 5
+        },
+        {
+            "day": "Понедельник",
+            "subject": "Физкультура",
+            "lesson_number": 6
         },
         {
             "day": "Вторник",
@@ -47,414 +1388,274 @@
         },
         {
             "day": "Вторник",
-            "subject": "Финансовая грамотность 303",
+            "subject": "-",
             "lesson_number": 2
         },
         {
             "day": "Вторник",
-            "subject": "Алгебра 323",
+            "subject": "Русский язык 32",
             "lesson_number": 3
         },
         {
             "day": "Вторник",
-            "subject": "Алгебра 323",
+            "subject": "Литература 32",
             "lesson_number": 4
         },
         {
             "day": "Вторник",
-            "subject": "Информац.безоп. 306",
-            "lesson_number": 5
-        },
-        {
-            "day": "Вторник",
-            "subject": "Мой край 303",
-            "lesson_number": 6
-        },
-        {
-            "day": "Вторник",
-            "subject": "НВП 215",
-            "lesson_number": 7
-        },
-        {
-            "day": "Вторник",
-            "subject": "Геометрия 323",
-            "lesson_number": 8
-        },
-        {
-            "day": "Среда",
-            "subject": "Информатика 306",
-            "lesson_number": 1
-        },
-        {
-            "day": "Среда",
-            "subject": "Финансовая грамотность 316",
-            "lesson_number": 2
-        },
-        {
-            "day": "Среда",
-            "subject": "Химия 205",
-            "lesson_number": 3
-        },
-        {
-            "day": "Среда",
-            "subject": "Английский язык 305",
-            "lesson_number": 4
-        },
-        {
-            "day": "Среда",
-            "subject": "Физкультура",
-            "lesson_number": 5
-        },
-        {
-            "day": "Среда",
-            "subject": "Геометрия 323",
-            "lesson_number": 6
-        },
-        {
-            "day": "Среда",
-            "subject": "Геометрия 323",
-            "lesson_number": 7
-        },
-        {
-            "day": "Среда",
-            "subject": "Вероятн.и стат. 323",
-            "lesson_number": 8
-        },
-        {
-            "day": "Четверг",
-            "subject": "Литература 308",
-            "lesson_number": 1
-        },
-        {
-            "day": "Четверг",
-            "subject": "Литература 308",
-            "lesson_number": 2
-        },
-        {
-            "day": "Четверг",
-            "subject": "География 316",
-            "lesson_number": 3
-        },
-        {
-            "day": "Четверг",
-            "subject": "География 316",
-            "lesson_number": 4
-        },
-        {
-            "day": "Четверг",
-            "subject": "История 312",
-            "lesson_number": 5
-        },
-        {
-            "day": "Четверг",
-            "subject": "Общество 106",
-            "lesson_number": 6
-        },
-        {
-            "day": "Четверг",
-            "subject": "ОБЗР 318",
-            "lesson_number": 7
-        },
-        {
-            "day": "Четверг",
-            "subject": "",
-            "lesson_number": 8
-        },
-        {
-            "day": "Четверг",
-            "subject": "",
-            "lesson_number": 10
-        },
-        {
-            "day": "Пятница",
-            "subject": "Общество 106",
-            "lesson_number": 1
-        },
-        {
-            "day": "Пятница",
-            "subject": "Общество 106",
-            "lesson_number": 2
-        },
-        {
-            "day": "Пятница",
-            "subject": "МХК 303",
-            "lesson_number": 3
-        },
-        {
-            "day": "Пятница",
-            "subject": "География 309",
-            "lesson_number": 4
-        },
-        {
-            "day": "Пятница",
-            "subject": "Английский язык 305",
-            "lesson_number": 5
-        },
-        {
-            "day": "Пятница",
             "subject": "Биология 214",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 212",
+            "lesson_number": 6
+        },
+        {
+            "day": "Среда",
+            "subject": "Математика 212",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "География 3 4",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Труд 1 4/1 5",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Труд 1 4/1 5",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 32",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Математика 212",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Туризм Спортзал",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 1 6",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 3 6/3 7",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "ОднкР 3 5",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 32",
             "lesson_number": 6
         },
         {
             "day": "Пятница",
-            "subject": "ГТО Спортзал",
-            "lesson_number": 7
+            "subject": "Физкультура",
+            "lesson_number": 1
         },
         {
             "day": "Пятница",
-            "subject": "Алгебра 323",
-            "lesson_number": 8
+            "subject": "Математика 212",
+            "lesson_number": 2
         },
         {
-            "day": "Суббота",
-            "subject": "Общество ДО",
-            "lesson_number": 1
+            "day": "Пятница",
+            "subject": "ИЗО 315",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Русский язык 32",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Литература 32",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 3 1/3 7",
+            "lesson_number": 6
         },
         {
             "day": "Суббота",
             "subject": "Литература ДО",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Проект. деят. 2 7",
             "lesson_number": 2
         },
         {
             "day": "Суббота",
-            "subject": "Англ. язык ДО",
+            "subject": "Россия – мои  горизонты  2 7",
             "lesson_number": 3
         },
         {
             "day": "Суббота",
-            "subject": "Физкультура ДО",
+            "subject": "Классный час 2 7",
             "lesson_number": 4
         },
         {
             "day": "Суббота",
-            "subject": "Россия – мои  горизонты 308",
+            "subject": "Час психолога",
             "lesson_number": 5
-        },
-        {
-            "day": "Суббота",
-            "subject": "Классный час 308",
-            "lesson_number": 6
-        },
-        {
-            "day": "Суббота",
-            "subject": "Индивидуальный проект ДО",
-            "lesson_number": 7
-        },
-        {
-            "day": "Суббота",
-            "subject": "",
-            "lesson_number": 8
         }
     ],
-    "11Б": [
+    "5Э": [
         {
             "day": "Понедельник",
-            "subject": "География 316",
+            "subject": "ИЗО 319",
             "lesson_number": 1
         },
         {
             "day": "Понедельник",
-            "subject": "География 316",
+            "subject": "Русский язык 319",
             "lesson_number": 2
         },
         {
             "day": "Понедельник",
-            "subject": "Разговоры о важном  323",
+            "subject": "Математика 212",
             "lesson_number": 3
         },
         {
             "day": "Понедельник",
-            "subject": "Физика 202",
+            "subject": "Англ. язык 301/307",
             "lesson_number": 4
         },
         {
             "day": "Понедельник",
-            "subject": "Физика 202",
-            "lesson_number": 5
-        },
-        {
-            "day": "Понедельник",
-            "subject": "Вероятн.и стат. 323",
-            "lesson_number": 6
-        },
-        {
-            "day": "Понедельник",
-            "subject": "Геометрия 323",
-            "lesson_number": 7
-        },
-        {
-            "day": "Понедельник",
-            "subject": "ОБЗР 215",
-            "lesson_number": 8
-        },
-        {
-            "day": "Вторник",
-            "subject": "Русский язык 308",
-            "lesson_number": 1
-        },
-        {
-            "day": "Вторник",
-            "subject": "Русский язык 308",
-            "lesson_number": 2
-        },
-        {
-            "day": "Вторник",
             "subject": "Физкультура",
-            "lesson_number": 3
-        },
-        {
-            "day": "Вторник",
-            "subject": "Информатика 205а/306",
-            "lesson_number": 4
-        },
-        {
-            "day": "Вторник",
-            "subject": "Алгебра 323",
             "lesson_number": 5
         },
         {
             "day": "Вторник",
-            "subject": "Алгебра 323",
+            "subject": "Англ. язык 306/3 7",
+            "lesson_number": 1
+        },
+        {
+            "day": "Вторник",
+            "subject": "История 316",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Математика 212",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Разгов. о важ 319",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Русский язык 319",
+            "lesson_number": 5
+        },
+        {
+            "day": "Вторник",
+            "subject": "Литература 319",
             "lesson_number": 6
         },
         {
-            "day": "Вторник",
-            "subject": "",
-            "lesson_number": 7
-        },
-        {
-            "day": "Вторник",
-            "subject": "",
-            "lesson_number": 8
-        },
-        {
             "day": "Среда",
-            "subject": "Финансовая грамотность 316",
+            "subject": "Русский язык 319",
             "lesson_number": 1
         },
         {
             "day": "Среда",
-            "subject": "IT – информатика 205а/306",
+            "subject": "ОднкР 203",
             "lesson_number": 2
         },
         {
             "day": "Среда",
-            "subject": "Семьеведение 303",
+            "subject": "Математика 212",
             "lesson_number": 3
         },
         {
             "day": "Среда",
-            "subject": "Геометрия 323",
+            "subject": "Физкультура",
             "lesson_number": 4
         },
         {
             "day": "Среда",
-            "subject": "Геометрия 323",
+            "subject": "География 304",
             "lesson_number": 5
         },
         {
-            "day": "Среда",
-            "subject": "Химия 205",
-            "lesson_number": 6
-        },
-        {
-            "day": "Среда",
-            "subject": "Финансовая грамотность 306",
-            "lesson_number": 7
-        },
-        {
-            "day": "Среда",
-            "subject": "",
-            "lesson_number": 8
-        },
-        {
             "day": "Четверг",
-            "subject": "Английский язык 305/307",
+            "subject": "Биология 303",
             "lesson_number": 1
         },
         {
             "day": "Четверг",
-            "subject": "История 312",
+            "subject": "История 205",
             "lesson_number": 2
         },
         {
             "day": "Четверг",
-            "subject": "Литература 308",
+            "subject": "Математика 212",
             "lesson_number": 3
         },
         {
             "day": "Четверг",
-            "subject": "Литература 308",
+            "subject": "Туризм Спортзал",
             "lesson_number": 4
         },
         {
             "day": "Четверг",
-            "subject": "Общество 106",
+            "subject": "Русский язык 319",
             "lesson_number": 5
         },
         {
             "day": "Четверг",
-            "subject": "НВП",
+            "subject": "Литература 319",
             "lesson_number": 6
         },
         {
-            "day": "Четверг",
-            "subject": "Алгебра 323",
-            "lesson_number": 7
-        },
-        {
-            "day": "Четверг",
-            "subject": "Алгебра 323",
-            "lesson_number": 8
-        },
-        {
-            "day": "Четверг",
-            "subject": "",
-            "lesson_number": 10
-        },
-        {
             "day": "Пятница",
-            "subject": "География 309",
+            "subject": "Математика 212",
             "lesson_number": 1
         },
         {
             "day": "Пятница",
-            "subject": "МХК 303",
+            "subject": "Англ. язык 301/307",
             "lesson_number": 2
         },
         {
             "day": "Пятница",
-            "subject": "Биология 214",
+            "subject": "Труд 104/105",
             "lesson_number": 3
         },
         {
             "day": "Пятница",
-            "subject": "Общество 106",
+            "subject": "Труд 104/105",
             "lesson_number": 4
-        },
-        {
-            "day": "Пятница",
-            "subject": "Общество 106",
-            "lesson_number": 5
-        },
-        {
-            "day": "Пятница",
-            "subject": "История 312",
-            "lesson_number": 6
-        },
-        {
-            "day": "Пятница",
-            "subject": "Английский язык 305/307",
-            "lesson_number": 7
-        },
-        {
-            "day": "Пятница",
-            "subject": "ГТО Спортзал",
-            "lesson_number": 8
         },
         {
             "day": "Суббота",
-            "subject": "Общество ДО",
+            "subject": "Русский язык ДО",
             "lesson_number": 1
         },
         {
@@ -464,33 +1665,23 @@
         },
         {
             "day": "Суббота",
-            "subject": "Англ. язык ДО",
+            "subject": "Проект. деят. 319",
             "lesson_number": 3
         },
         {
             "day": "Суббота",
-            "subject": "Физкультура ДО",
+            "subject": "Россия – мои  горизонты  319",
             "lesson_number": 4
         },
         {
             "day": "Суббота",
-            "subject": "Россия – мои  горизонты 323",
+            "subject": "Классный час 319",
             "lesson_number": 5
         },
         {
             "day": "Суббота",
-            "subject": "Классный час 323",
+            "subject": "Час психолога",
             "lesson_number": 6
-        },
-        {
-            "day": "Суббота",
-            "subject": "Индивидуальный проект ДО",
-            "lesson_number": 7
-        },
-        {
-            "day": "Суббота",
-            "subject": "",
-            "lesson_number": 8
         }
     ],
     "9А": [
@@ -525,14 +1716,114 @@
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "География 304",
-            "lesson_number": 7
+            "day": "Вторник",
+            "subject": "Геометрия 322",
+            "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 8
+            "day": "Вторник",
+            "subject": "Англ. язык 301/305",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Физика 202",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "История 316",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Химия 205",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Алгебра 324",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "ОБЗР 215",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Алгебра 322",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Вероятн.и стат. 322",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "География 304",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Литература 308",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Геометрия 322",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 218/305",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 214",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 205",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Семьеведение 307",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Алгебра 322",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Литература 308",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "История 316",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Физика 202",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Профориентация 303",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Труд (техн.)205а",
+            "lesson_number": 4
         }
     ],
     "9Б": [
@@ -567,14 +1858,114 @@
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "Русский язык 319",
-            "lesson_number": 7
+            "day": "Вторник",
+            "subject": "-",
+            "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 8
+            "day": "Вторник",
+            "subject": "Геометрия 322",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 301/305",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Химия 205",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "ОБЗР 306",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "География 304",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Литература 319",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Алгебра 322",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 319",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Общество 106",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Труд (техн.)205а",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 205",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Геометрия 322",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Вероятн.и стат. 322",
+            "lesson_number": 6
+        },
+        {
+            "day": "Пятница",
+            "subject": "Биология 214",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "ГТО Спортзал",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Физика 202",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 316",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Литература 319",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "География 304",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Профориентация 303",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Физкультура",
+            "lesson_number": 3
         }
     ],
     "9В": [
@@ -609,14 +2000,119 @@
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "Физкультура",
-            "lesson_number": 7
+            "day": "Вторник",
+            "subject": "Труд (техн.)205а",
+            "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "Труд (техн.)205а",
-            "lesson_number": 8
+            "day": "Вторник",
+            "subject": "Физика 202",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "География 304",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Геометрия 322",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Общество 106",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "История 215",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Биология 214",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Профориентация 303",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 319",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Алгебра 322",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "-",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "-",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 306/301",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Семьеведение 316",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Биология 214",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "ГТО Спортзал",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "ОБЗР 318",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "География 304",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 316",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "Алгебра 322",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Вероятн.и стат. 322",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Физика 202",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Физкультура",
+            "lesson_number": 4
         }
     ],
     "9Г": [
@@ -651,14 +2147,114 @@
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "Геометрия 324",
-            "lesson_number": 7
+            "day": "Вторник",
+            "subject": "Труд (техн.)205а",
+            "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 8
+            "day": "Вторник",
+            "subject": "Физкультура",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "География 304",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "Англ. язык 218/307",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Физика 202",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "-",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Семьеведение 216",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Физика 202",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Алгебра 324",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 319",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Литература 319",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "Биология 214",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "ОБЗР 315",
+            "lesson_number": 5
+        },
+        {
+            "day": "Четверг",
+            "subject": "Англ. язык 218/307",
+            "lesson_number": 6
+        },
+        {
+            "day": "Пятница",
+            "subject": "Геометрия 324",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "Вероятн.и стат. 324",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Русский язык 319",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Физкультура",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Профориентация 303",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "ГТО Спортзал",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература 319",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Алгебра 324",
+            "lesson_number": 2
         }
     ],
     "9Е": [
@@ -693,14 +2289,134 @@
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 7
+            "day": "Вторник",
+            "subject": "Физкультура",
+            "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 8
+            "day": "Вторник",
+            "subject": "Физика 202",
+            "lesson_number": 2
+        },
+        {
+            "day": "Вторник",
+            "subject": "ОБЗР 315",
+            "lesson_number": 3
+        },
+        {
+            "day": "Вторник",
+            "subject": "География 304",
+            "lesson_number": 4
+        },
+        {
+            "day": "Вторник",
+            "subject": "Алгебра 324",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Алгебра 324",
+            "lesson_number": 1
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 320",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Общество 106",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Биология 214",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Профориентация 303",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "Физкультура",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Литература 320",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "География 304",
+            "lesson_number": 4
+        },
+        {
+            "day": "Четверг",
+            "subject": "Русский язык 320",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "Информатика 203/205а",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "История 205",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Англ. язык 301/307",
+            "lesson_number": 3
+        },
+        {
+            "day": "Пятница",
+            "subject": "Труд (техн.)205а",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "-",
+            "lesson_number": 5
+        },
+        {
+            "day": "Пятница",
+            "subject": "-",
+            "lesson_number": 6
+        },
+        {
+            "day": "Суббота",
+            "subject": "ГТО Спортзал",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "История 316",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Алгебра 324",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Геометрия 324",
+            "lesson_number": 4
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 5
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 6
         }
     ],
     "9И": [
@@ -735,57 +2451,119 @@
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "Англ. язык 218/314",
-            "lesson_number": 7
-        },
-        {
-            "day": "Понедельник",
+            "day": "Вторник",
             "subject": "Физкультура",
-            "lesson_number": 8
-        }
-    ],
-    "9К": [
-        {
-            "day": "Понедельник",
-            "subject": "Алгебра 324",
             "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "Разговоры о важном 320",
+            "day": "Вторник",
+            "subject": "История 316",
             "lesson_number": 2
         },
         {
-            "day": "Понедельник",
-            "subject": "Литература 320",
+            "day": "Вторник",
+            "subject": "ОБЗР 315",
             "lesson_number": 3
         },
         {
-            "day": "Понедельник",
-            "subject": "Химия 205",
+            "day": "Вторник",
+            "subject": "Англ. язык 218/314",
             "lesson_number": 4
         },
         {
-            "day": "Понедельник",
-            "subject": "Геометрия 324",
+            "day": "Вторник",
+            "subject": "Геометрия 322",
             "lesson_number": 5
         },
         {
-            "day": "Понедельник",
-            "subject": "Труд (техн.)205а",
+            "day": "Вторник",
+            "subject": "Вероятн.и стат. 322",
             "lesson_number": 6
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 7
+            "day": "Среда",
+            "subject": "Физика 202",
+            "lesson_number": 1
         },
         {
-            "day": "Понедельник",
-            "subject": "",
-            "lesson_number": 8
+            "day": "Среда",
+            "subject": "Труд (техн.)205а",
+            "lesson_number": 2
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 308",
+            "lesson_number": 3
+        },
+        {
+            "day": "Среда",
+            "subject": "Русский язык 308",
+            "lesson_number": 4
+        },
+        {
+            "day": "Среда",
+            "subject": "Биология 214",
+            "lesson_number": 5
+        },
+        {
+            "day": "Среда",
+            "subject": "Алгебра 322",
+            "lesson_number": 6
+        },
+        {
+            "day": "Четверг",
+            "subject": "Физкультура",
+            "lesson_number": 1
+        },
+        {
+            "day": "Четверг",
+            "subject": "География 304",
+            "lesson_number": 2
+        },
+        {
+            "day": "Четверг",
+            "subject": "Семьеведение 216",
+            "lesson_number": 3
+        },
+        {
+            "day": "Четверг",
+            "subject": "История 205",
+            "lesson_number": 4
+        },
+        {
+            "day": "Пятница",
+            "subject": "Геометрия 322",
+            "lesson_number": 1
+        },
+        {
+            "day": "Пятница",
+            "subject": "ГТО Спортзал",
+            "lesson_number": 2
+        },
+        {
+            "day": "Пятница",
+            "subject": "Алгебра 322",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Физика 202",
+            "lesson_number": 1
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература 308",
+            "lesson_number": 2
+        },
+        {
+            "day": "Суббота",
+            "subject": "Русский язык ДО",
+            "lesson_number": 3
+        },
+        {
+            "day": "Суббота",
+            "subject": "Литература ДО",
+            "lesson_number": 4
         }
-    ],
-    "7А": []
+    ]
 }

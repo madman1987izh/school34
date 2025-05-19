@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <h1>Добро пожаловать!</h1>
-    <ul>
-        <li><a href="{{ url_for('get_schedule', parallel='1') }}">Расписание для 1 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='2') }}">Расписание для 2 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='3') }}">Расписание для 3 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='4') }}">Расписание для 4 классов</а></li>
-        <li><a href="{{ url_for('get_schedule', parallel='5') }}">Расписание для 5 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='6') }}">Расписание для 6 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='7') }}">Расписание для 7 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='8') }}">Расписание для 8 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='9') }}">Расписание для 9 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='10') }}">Расписание для 10 классов</a></li>
-        <li><a href="{{ url_for('get_schedule', parallel='11') }}">Расписание для 11 классов</a></li>
-        <li><a href="{{ url_for('manage') }}">Управление расписанием</a></li>
-    </ul>
-</body>
-</html>
+<!-- В head всех шаблонов -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <h1 class="display-4 mb-4">Школьное расписание</h1>
+      <div class="list-group">
+        {% for grade in range(5, 12) %}
+        <a href="{{ url_for('get_schedule', parallel=grade) }}"
+           class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+          Расписание для {{ grade }} классов
+          <span class="badge bg-primary rounded-pill">→</span>
+        </a>
+        {% endfor %}
+        <a href="{{ url_for('manage') }}"
+           class="list-group-item list-group-item-action list-group-item-warning">
+          Управление расписанием (для администраторов)
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

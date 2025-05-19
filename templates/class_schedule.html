@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание {{ class_name }} класса</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .schedule-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .qr-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .qr-code {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        .day-column {
+            font-weight: 500;
+            background-color: #f8f9fa !important;
+        }
+        .changed-lesson {
+            background-color: #fff0f0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="schedule-container">
+            <h1 class="text-center mb-4">
+                <i class="bi bi-journal-bookmark-fill"></i>
+                Расписание {{ class_name }} класса
+            </h1>
+
+            <div class="qr-container">
+                <img src="{{ url_for('generate_qr', class_name=class_name) }}"
+                     alt="QR-код расписания" class="qr-code img-fluid">
+                <p class="mt-2 text-muted">Отсканируйте QR-код для быстрого доступа</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="day-column">День недели</th>
+                            <th>Уроки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for day in days %}
+                            <tr>
+                                <td class="day-column">{{ day }}</td>
+                                <td>
+                                    {% for bell in bell_schedule %}
+                                        {% set lesson = schedule | selectattr('lesson_number', 'equalto', bell.lesson_number) | selectattr('day', 'equalto', day) | list %}
+                                        {% if lesson %}
+                                            <div class="{% if {'day': day, 'lesson_number': bell.lesson_number} in changes %}changed-lesson{% endif %} mb-2">
+                                                <strong>№{{ bell.lesson_number }}</strong>
+                                                ({{ bell.start_time }}-{{ bell.end_time }}):
+                                                {{ lesson[0].subject }}
+                                                {% if {'day': day, 'lesson_number': bell.lesson_number} in changes %}
+                                                    <span class="badge bg-danger">изм</span>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</body>
+</html>
