@@ -27,7 +27,6 @@ bell_schedule = [
     {'lesson_number': 7, 'start_time': '13:20', 'end_time': '14:00'},
     {'lesson_number': 8, 'start_time': '14:15', 'end_time': '14:55'}
 ]
-
 # Дни недели
 days_of_week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
 
